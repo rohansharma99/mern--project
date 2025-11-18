@@ -13,7 +13,7 @@ import fileUpload from "express-fileupload";
 import cookieParser from "cookie-parser";
 
 const app = express();
-dotenv.config({ path: "../.env" });
+dotenv.config();
 
 //middleware
 app.use(express.json());
