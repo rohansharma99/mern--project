@@ -134,7 +134,7 @@ export const courseDetails = async (req, res) => {
 
 import Stripe from "stripe";
 import config from "../config.js";
-const stripe = new Stripe(config.STRIPE_SECRET_KEY);
+const stripe = config.STRIPE_SECRET_KEY ? new Stripe(config.STRIPE_SECRET_KEY) : null;
 // console.log(config.STRIPE_SECRET_KEY);
 export const buyCourses = async (req, res) => {
   const { userId } = req;
@@ -153,6 +153,9 @@ export const buyCourses = async (req, res) => {
     }
 
     // stripe payment code goes here!!
+    if (!stripe) {
+      return res.status(500).json({ errors: "Stripe not configured" });
+    }
     const amount = course.price;
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount,
