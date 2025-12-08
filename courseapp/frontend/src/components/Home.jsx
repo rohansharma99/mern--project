@@ -215,13 +215,13 @@ function Home() {
               <h3 className="text-lg font-semibold md:mb-4">connects</h3>
               <ul className=" space-y-2 text-gray-400">
                 <li className="hover:text-white cursor-pointer duration-300">
-                  youtube- learn coding
+                  youtube-
                 </li>
                 <li className="hover:text-white cursor-pointer duration-300">
-                  telegram- learn coding
+                  telegram-
                 </li>
                 <li className="hover:text-white cursor-pointer duration-300">
-                  Github- learn coding
+                  Github-
                 </li>
               </ul>
             </div>
