@@ -1,2 +1,0 @@
-- [x] Remove the YouTube link from the main section in Home.jsx
-- [x] Remove "learn coding" from the footer items in Home.jsx
